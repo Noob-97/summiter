@@ -11008,7 +11008,7 @@ GameObject:
   - component: {fileID: 937592491}
   - component: {fileID: 937592490}
   m_Layer: 5
-  m_Name: tter
+  m_Name: ter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11030,7 +11030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -479.6, y: 140}
+  m_AnchoredPosition: {x: -377.38, y: 140}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &937592490
@@ -11075,7 +11075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'tter
+  m_text: 'ter
 
 '
   m_isRightToLeft: 0
@@ -11328,7 +11328,7 @@ GameObject:
   - component: {fileID: 1182751275}
   - component: {fileID: 1182751274}
   m_Layer: 5
-  m_Name: mi
+  m_Name: mmi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11395,7 +11395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: mi
+  m_text: mmi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 197aa28eaaff5224698cb00a0b9d10d4, type: 2}
   m_sharedMaterial: {fileID: 3192780908127180959, guid: 197aa28eaaff5224698cb00a0b9d10d4, type: 2}
@@ -12098,6 +12098,9 @@ MonoBehaviour:
     SecTillNext: 0
     TextSpeed: 0.05
   ConversationFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  FinishedDialogue:
     m_PersistentCalls:
       m_Calls: []
 --- !u!82 &1370970134
