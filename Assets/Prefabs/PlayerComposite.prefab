@@ -471,6 +471,7 @@ MonoBehaviour:
   watersfx: {fileID: 4857290671549316384, guid: 4c99ff4894f5a2b43a873597e8aafa05, type: 3}
   warnsfx: {fileID: 0}
   deathsfx: {fileID: 4857290671549316384, guid: caf8d1c426a7b484ca397e01cffcd5a4, type: 3}
+  doorsfx: {fileID: 0}
   JumpEnabled: 0
   RunEnabled: 0
   JumpForce: 7
@@ -482,7 +483,7 @@ MonoBehaviour:
   QueuePosition: 0
   latencyBetween: 0
   YOffset: 0
-  FlyEnabled: 1
+  FlyEnabled: 0
   Actions: []
   FinishedActions:
     m_PersistentCalls:
