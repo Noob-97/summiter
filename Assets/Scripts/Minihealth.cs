@@ -47,6 +47,7 @@ public class Minihealth : MonoBehaviour
             float value = (float)CharacterController2D.health / (float)CharacterController2D.maxhealth;
             FillUI.DOFillAmount(value, 0.25f);
             text.text = CharacterController2D.health.ToString();
+            GameObject.FindGameObjectWithTag("hp").GetComponent<TextMeshProUGUI>().text = CharacterController2D.health.ToString();
         }
     }
 

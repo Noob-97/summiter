@@ -8,8 +8,6 @@ namespace Example10 {
     public class WaterShapeController : MonoBehaviour
     {
         [SerializeField]
-        private GameObject box;
-        [SerializeField]
         private GameObject wavePointPref;
         //////////////////
         private int CorsnersCount = 2;
@@ -144,10 +142,12 @@ namespace Example10 {
         private Vector3 boxStartPosition = new Vector3(1.25f, 9f, 0f);
         // On Enable for example purposes
         void OnEnable() { 
-            box.transform.position = boxStartPosition;
             StartCoroutine(CreateWaves());
             foreach(WaterSpring waterSpringComponent in springs) {
-                waterSpringComponent.Init(spriteShapeController);
+                if (waterSpringComponent != null && spriteShapeController != null)
+                {
+                    waterSpringComponent.Init(spriteShapeController);
+                }
             }
         }
         void OnValidate() {

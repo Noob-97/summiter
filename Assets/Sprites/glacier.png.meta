@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      glacier_0: -5113053599392323721
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      caravan_0: -1153238867072891836
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
