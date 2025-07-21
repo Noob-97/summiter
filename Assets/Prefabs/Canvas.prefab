@@ -201,6 +201,8 @@ MonoBehaviour:
   text: {fileID: 2249094792223985435}
   Paused: 0
   StartPaused: 0
+  textHP: {fileID: 7952508634999176992}
+  warningSFX: {fileID: 4857290671549316384, guid: edd724028bf3ece4988b57f965f0c8d5, type: 3}
 --- !u!1 &1066721684815581309
 GameObject:
   m_ObjectHideFlags: 0

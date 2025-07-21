@@ -11,6 +11,8 @@ public class Minihealth : MonoBehaviour
     public TextMeshProUGUI text;
     public bool Paused;
     public bool StartPaused;
+    public TextMeshProUGUI textHP;
+    public GameObject warningSFX;
     void Start()
     {
         if (PlayerPrefs.HasKey("health"))
@@ -47,7 +49,15 @@ public class Minihealth : MonoBehaviour
             float value = (float)CharacterController2D.health / (float)CharacterController2D.maxhealth;
             FillUI.DOFillAmount(value, 0.25f);
             text.text = CharacterController2D.health.ToString();
-            GameObject.FindGameObjectWithTag("hp").GetComponent<TextMeshProUGUI>().text = CharacterController2D.health.ToString();
+
+            if (CharacterController2D.health < 5 && CharacterController2D.health >= 0)
+            {
+                GameObject.FindGameObjectWithTag("hpalpha").GetComponent<CanvasGroup>().alpha = 1;
+                GameObject.FindGameObjectWithTag("hpalpha").GetComponent<CanvasGroup>().DOFade(0, 1);
+                Instantiate(warningSFX);
+            }
+            string val = CharacterController2D.health.ToString();
+            textHP.text = val;
         }
     }
 

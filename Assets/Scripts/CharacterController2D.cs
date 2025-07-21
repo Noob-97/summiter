@@ -51,7 +51,6 @@ public class CharacterController2D : MonoBehaviour
     public GameObject healsfx;
     public GameObject hurtsfx;
     public GameObject watersfx;
-    public GameObject warnsfx;
     public GameObject deathsfx;
     public GameObject doorsfx;
     [Header("Progression")]

@@ -10,6 +10,7 @@ public class MenuOptions : MonoBehaviour
     public PlayableDirector cinematic;
     public GameObject txtbox;
     public GameObject nosavefile;
+    public AudioSource audio;
 
     public void StartNew()
     {
@@ -65,5 +66,22 @@ public class MenuOptions : MonoBehaviour
             cinematic.Play();
             txtbox.SetActive(false);
         }
+    }
+
+    public void GoToReveal()
+    {
+        if (cinematic.time < 64.25f)
+        {
+            StartCoroutine(gotoreveal());
+        }
+    }
+
+    IEnumerator gotoreveal()
+    {
+        audio.DOFade(0, 0.25f);
+        yield return new WaitForSeconds(0.25f);
+        audio.DOFade(1, 0.25f);
+        cinematic.time = 64.5f;
+        cinematic.Play();
     }
 }
