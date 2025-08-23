@@ -1991,11 +1991,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerComposite
       objectReference: {fileID: 0}
-    - target: {fileID: 2181498287678947390, guid: 1e4377b8b1bf7754e84e3739a5831f1c, type: 3}
-      propertyPath: JumpEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2258280099100566450, guid: 1e4377b8b1bf7754e84e3739a5831f1c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2056,7 +2053,6 @@ MonoBehaviour:
   healsfx: {fileID: 4857290671549316384, guid: 7e365355c81751c49a5da99ad4aef29b, type: 3}
   hurtsfx: {fileID: 4857290671549316384, guid: 186bbd0d8c5dcc446a60a2df1c73ed3e, type: 3}
   watersfx: {fileID: 4857290671549316384, guid: 4c99ff4894f5a2b43a873597e8aafa05, type: 3}
-  warnsfx: {fileID: 0}
   deathsfx: {fileID: 4857290671549316384, guid: caf8d1c426a7b484ca397e01cffcd5a4, type: 3}
   doorsfx: {fileID: 4857290671549316384, guid: ec35bd21116abc64fa4397aa729b9c80, type: 3}
   JumpEnabled: 0
@@ -2131,7 +2127,6 @@ MonoBehaviour:
   healsfx: {fileID: 4857290671549316384, guid: 7e365355c81751c49a5da99ad4aef29b, type: 3}
   hurtsfx: {fileID: 4857290671549316384, guid: 186bbd0d8c5dcc446a60a2df1c73ed3e, type: 3}
   watersfx: {fileID: 4857290671549316384, guid: 4c99ff4894f5a2b43a873597e8aafa05, type: 3}
-  warnsfx: {fileID: 0}
   deathsfx: {fileID: 4857290671549316384, guid: caf8d1c426a7b484ca397e01cffcd5a4, type: 3}
   doorsfx: {fileID: 4857290671549316384, guid: ec35bd21116abc64fa4397aa729b9c80, type: 3}
   JumpEnabled: 0

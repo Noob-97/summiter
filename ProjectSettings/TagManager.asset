@@ -18,6 +18,7 @@ TagManager:
   - mini
   - death
   - music
+  - text
   layers:
   - Default
   - TransparentFX

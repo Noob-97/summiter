@@ -21,46 +21,46 @@ public class FinaleManager : MonoBehaviour
         {
             case 0:
                 logo.SetActive(true);
-                logo.transform.Find("text").GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                logo.transform.Find("text").GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
             case 1:
                 madeby.SetActive(true);
-                madeby.GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                madeby.GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
             case 2:
                 madeby.SetActive(false);
                 forthe.SetActive(true);
-                forthe.GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                forthe.GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
             case 3:
                 forthe.SetActive(false);
                 audioassets.SetActive(true);
-                audioassets.GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                audioassets.GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
             case 4:
                 audioassets.SetActive(false);
                 musicby.SetActive(true);
-                musicby.GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                musicby.GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
             case 5:
                 musicby.SetActive(false);
                 madein.SetActive(true);
-                madein.GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                madein.GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
             case 6:
                 madein.SetActive(false);
                 specialthx.SetActive(true);
-                specialthx.GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                specialthx.GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
             case 7:
                 specialthx.SetActive(false);
                 andyou.SetActive(true);
-                andyou.GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                andyou.GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
             case 8:
                 andyou.SetActive(false);
                 thxforplaying.SetActive(true);
-                thxforplaying.GetComponent<TextMeshProUGUI>().DOFade(1, 0.25f);
+                thxforplaying.GetComponent<TextMeshPro>().DOFade(1, 0.25f);
                 break;
         }
     }

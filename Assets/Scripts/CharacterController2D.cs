@@ -117,7 +117,7 @@ public class CharacterController2D : MonoBehaviour
         transform.Find("LFOOT").Find("referlf_0").GetComponent<SpriteRenderer>().DOFade(0.2f, 0.25f);
         transform.Find("RFOOT").Find("referrf_0").GetComponent<SpriteRenderer>().DOFade(0.2f, 0.25f);
     }
-
+    bool raisedFlag;
     IEnumerator ExecuteActions()
     {
         for (int i = 0; i < Actions.Length; i++)
@@ -129,7 +129,11 @@ public class CharacterController2D : MonoBehaviour
         }
         dir = Vector2.zero;
         UpdateAnim();
-        FinishedActions.Invoke();
+        if (!raisedFlag)
+        {
+            FinishedActions.Invoke();
+            raisedFlag = true;
+        }
     }
 
     public void Flip()
@@ -422,7 +426,7 @@ public class CharacterController2D : MonoBehaviour
 
     void UpdateAnim(string overrideAnim = "none")
     {
-        if (overrideAnim == "none")
+        if (overrideAnim == "none" && anim != null)
         {
             if (dir == Vector2.zero)
             {
@@ -439,7 +443,7 @@ public class CharacterController2D : MonoBehaviour
                 transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
             }
         }
-        else
+        else if (anim != null)
         {
             anim.Play(overrideAnim);
         }
@@ -607,12 +611,6 @@ public class CharacterController2D : MonoBehaviour
         if (rb.linearVelocityY < 0)
         {
             rb.linearVelocityY -= -Physics2D.gravity.y * FallMultiplier * Time.deltaTime;
-        }
-        // Debug Flying
-        if (Input.GetKey(KeyCode.P))
-        {
-            flying = true;
-            rb.MovePosition(rb.position + dir * vel * 2 * Time.deltaTime);
         }
         if (health < 0 && dying == false)
         {

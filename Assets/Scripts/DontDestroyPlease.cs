@@ -15,7 +15,16 @@ public class DontDestroyPlease : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (SceneManager.GetActiveScene().name == "FinalScene")
+        if (SceneManager.GetActiveScene().name == "Level6")
+        {
+            Destroy(gameObject);
+        }
+        SceneManager.sceneLoaded += (scene, mode) => CheckScene();
+    }
+
+    void CheckScene()
+    {
+        if (SceneManager.GetActiveScene().name == "Level4")
         {
             Destroy(gameObject);
         }

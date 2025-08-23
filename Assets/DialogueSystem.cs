@@ -35,6 +35,7 @@ public class DialogueSystem : MonoBehaviour
     private bool PressedNextWhileType;
     public UnityEvent ConversationFinished;
     public UnityEvent<int> FinishedDialogue;
+    //public GameObject TEST;
     public void Start()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
