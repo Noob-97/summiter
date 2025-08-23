@@ -43,8 +43,11 @@ namespace Example10 {
         public void WavePointUpdate() { 
             if (spriteShapeController != null) {
                 Spline waterSpline = spriteShapeController.spline;
-                Vector3 wavePosition = waterSpline.GetPosition(waveIndex);
-                waterSpline.SetPosition(waveIndex, new Vector3(wavePosition.x, transform.localPosition.y, wavePosition.z));
+                if (waveIndex < waterSpline.GetPointCount())
+                {
+                    Vector3 wavePosition = waterSpline.GetPosition(waveIndex);
+                    waterSpline.SetPosition(waveIndex, new Vector3(wavePosition.x, transform.localPosition.y, wavePosition.z));
+                }
             }
         }
         // Adding a collider so we can detect the falling object
@@ -54,7 +57,7 @@ namespace Example10 {
         private void OnCollisionEnter2D(Collision2D other) {
             if (other.gameObject.tag.Equals("FallingObject")) {
                 FallingObject fallingObject = other.gameObject.GetComponent<FallingObject>();
-                Rigidbody2D rb = fallingObject.rigidbody2D;
+                Rigidbody2D rb = fallingObject.GetComponent<Rigidbody2D>();
                 var speed = rb.linearVelocity;
 
                 velocity += speed.y/resistance;

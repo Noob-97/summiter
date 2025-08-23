@@ -12,6 +12,23 @@ public class MenuOptions : MonoBehaviour
     public GameObject nosavefile;
     public AudioSource audio;
 
+    public void Start()
+    {
+        PlayerPrefs.SetInt("BUGGY!", 0);
+    }
+
+    public void ChangeBUGGY(bool value)
+    {
+        if (value)
+        {
+            PlayerPrefs.SetInt("BUGGY!", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("BUGGY!", 0);
+        }
+    }
+
     public void StartNew()
     {
         StartCoroutine(Transition("start"));
@@ -31,6 +48,10 @@ public class MenuOptions : MonoBehaviour
     {
         StartCoroutine(Transition("exit"));
     }
+    public void GoToIntro()
+    {
+        StartCoroutine(Transition("intro"));
+    }
     IEnumerator Transition(string operation)
     {
         GameObject.FindGameObjectWithTag("black").GetComponent<CanvasGroup>().DOFade(1, 0.5f);
@@ -48,6 +69,10 @@ public class MenuOptions : MonoBehaviour
         else if (operation == "exit")
         {
             Application.Quit();
+        }
+        else if (operation == "intro")
+        {
+            SceneManager.LoadScene("IntroScene");
         }
     }
     public void GetSkip(CallbackContext context)

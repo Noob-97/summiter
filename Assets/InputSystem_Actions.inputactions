@@ -45,7 +45,7 @@
                     "name": "Crouch",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1075,6 +1075,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DENOCLIP",
+                    "type": "Button",
+                    "id": "cf96db3d-6075-4576-8613-3a841088f85f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1245,6 +1254,17 @@
                 },
                 {
                     "name": "",
+                    "id": "5d262db1-e7d5-42ea-a297-18c3c2466f83",
+                    "path": "<Keyboard>/rightShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CROUCH",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "737f1128-f073-40da-a8bf-e15659d4d72c",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
@@ -1295,6 +1315,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "RESTART",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "552d15d8-e2ae-4dc1-9f10-93178deef6b1",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DENOCLIP",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -11,6 +11,7 @@ public class Minihealth : MonoBehaviour
     public TextMeshProUGUI text;
     public bool Paused;
     public bool StartPaused;
+    public bool IgnoreFirst5;
     public TextMeshProUGUI textHP;
     public GameObject warningSFX;
     void Start()
@@ -39,6 +40,10 @@ public class Minihealth : MonoBehaviour
 
     IEnumerator Loop()
     {
+        if (IgnoreFirst5)
+        {
+            yield return new WaitForSeconds(5);
+        }
         while (true)
         {
             yield return new WaitForSeconds(1);
@@ -72,6 +77,7 @@ public class Minihealth : MonoBehaviour
     public void Resume()
     {
         Paused = false;
+        IgnoreFirst5 = false;
         text.text = CharacterController2D.health.ToString();
     }
     public void Restart()

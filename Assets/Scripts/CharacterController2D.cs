@@ -160,6 +160,14 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+    public void GetDENOCLIP(CallbackContext context)
+    {
+        if (context.performed)
+        {
+            rb.MovePosition(new Vector2(rb.position.x, rb.position.y + 1));
+        }
+    }
+
     public void GetDive(CallbackContext context)
     {
         if (DiveAllowed && Mode == ControlMode.PlayerInput)

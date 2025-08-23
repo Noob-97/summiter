@@ -5,30 +5,32 @@ using UnityEngine;
 public class FallingObject : MonoBehaviour
 {
     private Vector2 movementDirection;
-    public Rigidbody2D rigidbody2D;
+    public Rigidbody2D rb;
     [SerializeField]
     private float forceAmount;
-    private float timeElapsed;
     private bool isMoving = false;
     void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
-        rigidbody2D.linearVelocity = Vector3.down * forceAmount;
+        rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocity = Vector3.down * forceAmount;
     }
 
     void Update() { 
-        
-        movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        timeElapsed += Time.deltaTime;
-        
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) {
-            isMoving = true;
-        }
-        if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow)) {
-            isMoving = false;
-        }
-        if (isMoving) {
-            rigidbody2D.linearVelocity = movementDirection * forceAmount;
+        if (PlayerPrefs.GetInt("BUGGY!") == 1) {
+            movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                isMoving = true;
+            }
+            if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+            {
+                isMoving = false;
+            }
+            if (isMoving)
+            {
+                rb.linearVelocity = movementDirection * forceAmount;
+            }
         }
     }
 }
